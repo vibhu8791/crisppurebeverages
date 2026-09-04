@@ -22,10 +22,10 @@ function ProductsPage() {
     <>
       <PageHero
         eyebrow="Our Range"
-        title="Our Products"
+        title="Shop Products"
         subtitle="Refreshing hydration for every occasion."
       />
-      <ProductsSection />
+      <ProductsSection showHeading={false} />
       <CtaSection />
     </>
   );
