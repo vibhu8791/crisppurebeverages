@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaSection, PageHero, ProductsSection } from "@/components/site/Sections";
 
-const title = "Our Products | CRISPPURE BEVERAGES";
+const title = "Shop Products | CRISPPURE BEVERAGES";
 const description =
   "CRISPPURE packaged drinking water in 1 litre, 500ml, 250ml and 200ml bottles for every occasion.";
 
