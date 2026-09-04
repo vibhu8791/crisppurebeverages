@@ -34,23 +34,23 @@ export function Header() {
       >
         <LogoLockup imageClassName={cn("transition-all", scrolled ? "h-9" : "h-11")} />
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 md:flex">
           {navLinks.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              className="rounded-full px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-secondary hover:text-primary data-[status=active]:bg-secondary data-[status=active]:text-primary"
+              className="rounded-full px-2.5 py-2 text-[13px] font-semibold lg:px-3 lg:text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-primary data-[status=active]:bg-secondary data-[status=active]:text-primary"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 md:flex">
           <a
             href={brand.phoneHref}
-            className="flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-80"
+            className="hidden items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-80 xl:flex"
           >
             <Phone className="h-4 w-4" />
             {brand.phone}
@@ -65,14 +65,14 @@ export function Header() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-primary lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-primary md:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="border-t border-border bg-background md:hidden">
           <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
             {navLinks.map((item) => (
               <Link
