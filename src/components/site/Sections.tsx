@@ -216,16 +216,24 @@ export function AboutSection({ withCta = true }: { withCta?: boolean }) {
   );
 }
 
-export function ProductsSection() {
+export function ProductsSection({
+  eyebrow = "Our Range",
+  title = "Our Products",
+  subtitle = "Refreshing hydration for every occasion.",
+  showHeading = true,
+}: {
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  showHeading?: boolean;
+} = {}) {
   return (
     <section className="relative overflow-hidden bg-sky-soft py-20">
       <WaterBackdrop />
       <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Our Range"
-          title="Our Products"
-          subtitle="Refreshing hydration for every occasion."
-        />
+        {showHeading ? (
+          <SectionHeading eyebrow={eyebrow} title={title} subtitle={subtitle} />
+        ) : null}
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p) => (
             <article
