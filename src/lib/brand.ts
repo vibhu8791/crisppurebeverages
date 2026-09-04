@@ -21,7 +21,7 @@ export const brand = {
 export const navLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
-  { label: "Products", to: "/products" },
+  { label: "Shop Products", to: "/products" },
   { label: "Quality", to: "/quality" },
   { label: "Manufacturing", to: "/manufacturing" },
   { label: "Distributors", to: "/distributors" },
