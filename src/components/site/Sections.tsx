@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   Boxes,
+  Briefcase,
   Building2,
   CalendarHeart,
   ChefHat,
@@ -35,11 +36,11 @@ export function SectionHeading({
   align = "center",
   inverted = false,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   title: ReactNode;
-  subtitle?: string;
-  align?: "center" | "left";
-  inverted?: boolean;
+  subtitle?: string | undefined;
+  align?: "center" | "left" | undefined;
+  inverted?: boolean | undefined;
 }) {
   return (
     <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
@@ -443,7 +444,6 @@ const audiences = [
   { icon: Truck, title: "Distributors" },
 ];
 
-import { Briefcase } from "lucide-react";
 
 export function WhoWeServeSection() {
   return (
@@ -619,7 +619,7 @@ export function PageHero({
 }: {
   eyebrow: string;
   title: ReactNode;
-  subtitle?: string;
+  subtitle?: string | undefined;
 }) {
   return (
     <section className="relative overflow-hidden bg-water-gradient py-16 lg:py-20">

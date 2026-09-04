@@ -105,7 +105,7 @@ export function EnquiryForm() {
             id="message"
             rows={4}
             placeholder="Tell us about your requirement"
-            value={values.message ?? ""}
+            value={values["message"] ?? ""}
             onChange={(e) => setValues((v) => ({ ...v, message: e.target.value }))}
             className="rounded-xl bg-background"
           />

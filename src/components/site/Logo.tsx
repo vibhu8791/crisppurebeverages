@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { LOGO_URL, brand } from "@/lib/brand";
 import { cn } from "@/lib/utils";
 
-export function LogoMark({ className }: { className?: string }) {
+export function LogoMark({ className }: { className?: string | undefined }) {
   return (
     <img
       src={LOGO_URL}
@@ -19,9 +19,9 @@ export function LogoLockup({
   imageClassName,
   inverted = false,
 }: {
-  className?: string;
-  imageClassName?: string;
-  inverted?: boolean;
+  className?: string | undefined;
+  imageClassName?: string | undefined;
+  inverted?: boolean | undefined;
 }) {
   return (
     <Link to="/" className={cn("flex items-center gap-3", className)}>
