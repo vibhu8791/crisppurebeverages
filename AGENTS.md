@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep website images needed by external deployments in `public/` with same-origin paths, because Lovable-only asset paths may not resolve on third-party hosts.
